@@ -25,8 +25,8 @@ export async function subscribeToNewsletter(data: NewsletterData): Promise<{ suc
           Telefone: ${data.phone}
           Aceitou termos: ${data.acceptTerms ? 'Sim' : 'Não'}
         `,
-        from_name: "Supreme Brasil Newsletter",
-        to_email: "sac@pega.promo"
+        from_name: "Supreme Brasil Newsletter"
+      
       })
     });
 
