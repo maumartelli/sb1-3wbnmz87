@@ -14,7 +14,7 @@ export async function subscribeToNewsletter(data: NewsletterData): Promise<{ suc
         'Accept': 'application/json'
       },
       body: JSON.stringify({
-        access_key: 'b1990499-c78d-4941-a3f0-d158c10c136c', // Você precisará se registrar em web3forms.com para obter uma chave
+        access_key: import.meta.env.VITE_WEB3FORMS_ACCESS_KEY,
         name: data.name,
         email: data.email,
         phone: data.phone,
@@ -25,8 +25,8 @@ export async function subscribeToNewsletter(data: NewsletterData): Promise<{ suc
           Telefone: ${data.phone}
           Aceitou termos: ${data.acceptTerms ? 'Sim' : 'Não'}
         `,
-        from_name: "Supreme Brasil Newsletter"
-      
+        from_name: "Supreme Brasil Newsletter",
+        to_email: "sac@pega.promo"
       })
     });
 
